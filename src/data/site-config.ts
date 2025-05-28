@@ -56,7 +56,6 @@ const siteConfig: SiteConfig = {
             text: 'Proyectos',
             href: '/projects'
         },
-        ,
     ],
     hero: {
         title: 'Hi There & Welcome to My Corner of the Web!',
