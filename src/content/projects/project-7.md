@@ -11,7 +11,7 @@ seo:
 ![Project preview](/project-7.jpeg)
 
 **Resumen del proyecto:**
-Participé en el desarrollo e implementación de soluciones de interoperabilidad en el sector salud para SURA, integrando sistemas clínicos y administrativos bajo estándares nacionales e internacionales. Realicé toda la documentación del proyecto y desarrollé automatizaciones de procesos, contribuyendo a un intercambio de información más seguro, trazable y eficiente.
+Participé en el desarrollo e implementación de soluciones de interoperabilidad en el sector salud para SURAMERICANA SAS, integrando sistemas clínicos y administrativos bajo estándares nacionales e internacionales. Realicé toda la documentación del proyecto y desarrollé automatizaciones de procesos, contribuyendo a un intercambio de información más seguro, trazable y eficiente.
 
 ## Objetivos
 
