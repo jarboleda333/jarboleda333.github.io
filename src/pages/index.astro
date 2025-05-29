@@ -44,4 +44,39 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
         )
     }
 
+    <section class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Lenguajes</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {[
+        'JavaScript', 'TypeScript', 'Python', 'HTML & CSS',
+        'SQL', 'Java', 'PHP', 'C#'
+      ].map(lang => (
+        <div class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white p-4 rounded-xl shadow text-center text-lg font-medium transition hover:scale-105 duration-200">
+          {lang}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Estudios</h2>
+    <div class="space-y-6 max-w-2xl mx-auto">
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Tecnólogo en Análisis y Desarrollo de Software</h3>
+        <p class="text-gray-600 dark:text-gray-300">SENA — Servicio Nacional de Aprendizaje</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Finalizado</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Especialización en Desarrollo Web</h3>
+        <p class="text-gray-600 dark:text-gray-300">Curso complementario</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">En proceso / Finalizado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 </BaseLayout>
