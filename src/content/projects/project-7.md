@@ -13,7 +13,7 @@ seo:
 **Resumen del proyecto:**
 Participé en el desarrollo e implementación de soluciones de interoperabilidad en el sector salud para SURA, integrando sistemas clínicos y administrativos bajo estándares nacionales e internacionales. Realicé toda la documentación del proyecto y desarrollé automatizaciones de procesos, contribuyendo a un intercambio de información más seguro, trazable y eficiente.
 
-## Objectivos
+## Objetivos
 
 1. Desarrollar soluciones de software eficientes y escalables que respondan a las necesidades específicas de los sectores en los que participo, aportando valor y mejorando procesos.
 2. Contribuir en equipos multidisciplinarios mediante buenas prácticas de desarrollo, documentación clara y automatización de procesos, promoviendo la calidad y sostenibilidad del software.
