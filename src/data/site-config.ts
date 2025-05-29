@@ -60,12 +60,6 @@ const siteConfig: SiteConfig = {
             src: '/hero.jpeg',
             alt: 'A person sitting at a desk in front of a computer'
         },
-        actions: [
-            {
-                text: 'Get in Touch',
-                href: '/contact'
-            }
-        ]
     },
     subscribe: {
         title: 'Subscribe to Dante Newsletter',

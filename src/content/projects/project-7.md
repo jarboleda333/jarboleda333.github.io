@@ -1,6 +1,6 @@
 ---
-title: CryptoTrader - Cryptocurrency Portfolio Manager
-description: CryptoTrader Dashboard is a comprehensive web application designed to empower cryptocurrency enthusiasts with tools to manage and optimize their digital asset portfolios.
+title: Analista y desarrollador de software - Tech Writer
+description: Desarrollé e integré soluciones de interoperabilidad para sistemas clínicos y administrativos, mejorando el intercambio seguro y eficiente de información en el entorno de salud.
 publishDate: 'Jan 10 2024'
 isFeatured: true
 seo:
@@ -10,10 +10,8 @@ seo:
 
 ![Project preview](/project-7.jpg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
-
-**Project Overview:**
-CryptoTrader Dashboard is a comprehensive web application designed to empower cryptocurrency enthusiasts with tools to manage and optimize their digital asset portfolios. By providing real-time market data, analytics, and portfolio tracking, the dashboard offers a seamless experience for users to monitor and enhance their cryptocurrency investments.
+**Resumen del proyecto:**
+Participé en el desarrollo e implementación de soluciones de interoperabilidad en el sector salud para SURA, integrando sistemas clínicos y administrativos bajo estándares nacionales e internacionales. Realicé toda la documentación del proyecto y desarrollé automatizaciones de procesos, contribuyendo a un intercambio de información más seguro, trazable y eficiente.
 
 ## Objectives
 
