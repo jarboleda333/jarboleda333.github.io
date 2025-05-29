@@ -25,7 +25,7 @@ export type Subscribe = {
 export type SiteConfig = {
     website: string;
     logo?: Image;
-    title: string;``
+    title: string;
     subtitle?: string;
     description: string;
     image?: Image;
