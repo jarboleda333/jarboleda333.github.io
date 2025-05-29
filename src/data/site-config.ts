@@ -68,3 +68,4 @@ const siteConfig: SiteConfig = {
     projectsPerPage: 8
 };
 
+export default siteConfig;
