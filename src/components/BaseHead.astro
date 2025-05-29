@@ -1,39 +1,83 @@
 ---
-{
-  (hero?.title || hero?.image?.src || hero?.text || (hero?.actions && hero.actions.length > 0)) && (
-    <section class="w-full text-center py-20 flex flex-col items-center gap-6 mb-16 sm:mb-24">
-      
-      {hero.image?.src && (
-        <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-md">
-          <img
-            src={hero.image.src}
-            loading="lazy"
-            decoding="async"
-            alt={hero.image.alt || ''}
-            class="w-full h-full object-cover"
-          />
-        </div>
-      )}
+// BaseLayout.astro
+import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import newsreaderWoff2 from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
+import siteConfig from '../data/site-config';
+import '../styles/global.css';
+import Button from './Button.astro';
+import { marked } from 'marked';
 
-      {hero.title && (
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-          {hero.title}
-        </h1>
-      )}
+export type Props = {
+  title?: string;
+  description?: string;
+  image?: { src: string; alt?: string };
+  pageType?: 'website' | 'article';
+};
 
-      {hero.text && (
-        <p class="max-w-2xl text-lg sm:text-xl text-gray-600 dark:text-gray-300">
-          {hero.text}
-        </p>
-      )}
+const { title: pageTitle, description = '', image = siteConfig.image, pageType = 'website' } = Astro.props;
+const title = [pageTitle, siteConfig.title].filter(Boolean).join(' | ');
+const resolvedImage = image?.src
+  ? {
+      src: new URL(image.src, Astro.site).toString(),
+      alt: image.alt
+    }
+  : undefined;
+const canonicalURL = new URL(Astro.request.url, Astro.site);
 
-      {hero.actions && hero.actions.length > 0 && (
-        <div class="flex flex-wrap justify-center gap-4 mt-4">
-          {hero.actions.map((action) => (
-            <Button href={action.href}>{action.text}</Button>
-          ))}
-        </div>
-      )}
-    </section>
-  )
+function formatCanonicalURL(url: string | URL) {
+  const path = url.toString();
+  const hasQueryParams = path.includes('?');
+  return path.replace(/\/?$/, hasQueryParams ? '' : '/');
 }
+
+const hero = siteConfig.hero;
+---
+
+<html lang="es">
+  <head>
+    <!-- tu meta y preload de fonts intactos -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- resto de OpenGraph, Twitter, etc... -->
+  </head>
+  <body class="bg-[var(--bg-main)] text-[var(--text-main)]">
+    <!-- ==== HERO ACTUALIZADO ==== -->
+    {hero && (
+      <section class="w-full text-center py-20 flex flex-col items-center gap-6">
+        {hero.image?.src && (
+          <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg">
+            <img
+              src={hero.image.src}
+              alt={hero.image.alt || ''}
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        )}
+        {hero.title && (
+          <h1 class="text-3xl sm:text-4xl font-extrabold">{hero.title}</h1>
+        )}
+        {hero.text && (
+          <p class="max-w-2xl text-lg sm:text-xl opacity-80">
+            {hero.text}
+          </p>
+        )}
+        {hero.actions && hero.actions.length > 0 && (
+          <div class="mt-6 flex flex-wrap justify-center gap-4">
+            {hero.actions.map((action) => (
+              <Button href={action.href}>{action.text}</Button>
+            ))}
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- Aquí iría el <slot /> u otras secciones -->
+    <main class="px-4">
+      <slot />
+    </main>
+  </body>
+</html>
