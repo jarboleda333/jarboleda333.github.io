@@ -16,67 +16,70 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-    <Hero />
-    {
-        featuredProjects?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Projects</h2>
-                {featuredProjects.map((project) => (
-                    <ProjectPreview project={project} class="mb-10 sm:mb-12" headingLevel="h3" />
-                ))}
-                <div class="mt-12 sm:mt-16">
-                    <Button href="/projects">Ver todos los proyectos</Button>
-                </div>
-            </div>
-        )
-    }
-    {
-        featuredPosts?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Writing</h2>
-                {featuredPosts.map((post) => (
-                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
-                ))}
-                <div class="mt-12 sm:mt-16">
-                    <Button href="/blog">View All Posts</Button>
-                </div>
-            </div>
-        )
-    }
+  <Hero />
 
-    <section class="py-16 bg-white dark:bg-gray-900">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Lenguajes</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      {[
-        'JavaScript', 'TypeScript', 'Python', 'HTML & CSS',
-        'SQL', 'Java', 'PHP', 'C#'
-      ].map(lang => (
-        <div class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white p-4 rounded-xl shadow text-center text-lg font-medium transition hover:scale-105 duration-200">
-          {lang}
+  <!-- 📘 NUEVAS SECCIONES UNIFICADAS EN ESTILO -->
+  <section class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Lenguajes</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {[
+          'JavaScript', 'TypeScript', 'Python', 'HTML & CSS',
+          'SQL', 'Java', 'PHP', 'C#'
+        ].map(lang => (
+          <div class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white p-4 rounded-xl shadow text-center text-lg font-medium transition hover:scale-105 duration-200">
+            {lang}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Estudios</h2>
+      <div class="space-y-6">
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Tecnólogo en Análisis y Desarrollo de Software</h3>
+          <p class="text-gray-600 dark:text-gray-300">SENA — Servicio Nacional de Aprendizaje</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Finalizado</p>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-<section class="py-16 bg-gray-50 dark:bg-gray-800">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Estudios</h2>
-    <div class="space-y-6 max-w-2xl mx-auto">
-      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Tecnólogo en Análisis y Desarrollo de Software</h3>
-        <p class="text-gray-600 dark:text-gray-300">SENA — Servicio Nacional de Aprendizaje</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400">Finalizado</p>
-      </div>
-      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Especialización en Desarrollo Web</h3>
-        <p class="text-gray-600 dark:text-gray-300">Curso complementario</p>
-        <p class="text-sm text-gray-500 dark:text-gray-400">En proceso / Finalizado</p>
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Especialización en Desarrollo Web</h3>
+          <p class="text-gray-600 dark:text-gray-300">Curso complementario</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">En proceso / Finalizado</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- 🚀 PROYECTOS -->
+  {
+    featuredProjects?.length > 0 && (
+      <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl text-gray-900 dark:text-white">Proyectos</h2>
+        {featuredProjects.map((project) => (
+          <ProjectPreview project={project} class="mb-10 sm:mb-12" headingLevel="h3" />
+        ))}
+        <div class="mt-12 sm:mt-16">
+          <Button href="/projects">Ver todos los proyectos</Button>
+        </div>
+      </div>
+    )
+  }
 
+  <!-- ✍️ BLOG -->
+  {
+    featuredPosts?.length > 0 && (
+      <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl text-gray-900 dark:text-white">Blog</h2>
+        {featuredPosts.map((post) => (
+          <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
+        ))}
+        <div class="mt-12 sm:mt-16">
+          <Button href="/blog">Ver todos los artículos</Button>
+        </div>
+      </div>
+    )
+  }
 </BaseLayout>
