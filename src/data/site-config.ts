@@ -25,7 +25,9 @@ export type Subscribe = {
 export type SiteConfig = {
     website: string;
     logo?: Image;
+    title: string;
     subtitle?: string;
+    description: string;
     image?: Image;
     headerNavLinks?: Link[];
     footerNavLinks?: Link[];
@@ -38,7 +40,9 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     website: 'https://jarboleda333.github.io',
+    title: 'Jorge Arboleda',
     subtitle: 'Analista y Desarrollador de Software',
+    description: 'Tema para blog y portafolio basado en Astro.js y Tailwind CSS, creado por justgoodui.com',
     
     headerNavLinks: [
         {
