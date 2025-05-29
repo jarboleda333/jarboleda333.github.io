@@ -42,6 +42,7 @@ const siteConfig: SiteConfig = {
     website: 'https://jarboleda333.github.io',
     title: 'Jorge Arboleda',
     subtitle: 'Análista y desarrollador de Software',
+    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
     headerNavLinks: [
         {
             text: 'Perfil',
@@ -54,7 +55,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: '¡Bienvenido(a) a mi portafolio! Aquí encontrarás una muestra de mis proyectos, habilidades y experiencias que reflejan mi pasión y compromiso con el desarrollo profesional. ¡Gracias por visitarlo!!',
-        text: 'Soy Analista y Desarrollador de Software con 4 años de trayectoria en el sector. A lo largo de mi carrera, he participado en proyectos de interoperabilidad en salud, soluciones para el sector inmobiliario, tiendas en línea y aplicaciones web. También he trabajado en la implementación de software para pequeñas y medianas empresas (pymes) y en sistemas de gestión documental. Mi enfoque está orientado a crear soluciones funcionales, eficientes y adaptadas a las necesidades de cada cliente.',
+        text: 'Soy Analista y Desarrollador de Software con 4 años de trayectoria en el sector. A lo largo de mi carrera, he participado en proyectos de interoperabilidad en salud, soluciones para el sector inmobiliario, tiendas en línea y aplicaciones web. También he trabajado en la implementación de software para pequeñas y medianas empresas (pymes) y en sistemas de gestión documental. Mi enfoque está orientado a crear soluciones funcionales, eficientes y adaptadas a las necesidades de cada cliente.', //
         image: {
             src: '/hero.jpeg',
             alt: 'A person sitting at a desk in front of a computer'
