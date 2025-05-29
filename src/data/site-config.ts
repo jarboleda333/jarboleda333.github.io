@@ -40,8 +40,8 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     website: 'https://jarboleda333.github.io',
-    title: 'Jorge Arboleda',
-    subtitle: 'Analista y Desarrollador de Software',
+    title: '',
+    subtitle: '',
     description: 'Tema para blog y portafolio basado en Astro.js y Tailwind CSS, creado por justgoodui.com',
     
     headerNavLinks: [
