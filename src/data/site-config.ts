@@ -41,8 +41,9 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
     website: 'https://jarboleda333.github.io',
     title: 'Jorge Arboleda',
-    subtitle: 'Análista y desarrollador de Software',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+    subtitle: 'Analista y Desarrollador de Software',
+    description: 'Tema para blog y portafolio basado en Astro.js y Tailwind CSS, creado por justgoodui.com',
+    
     headerNavLinks: [
         {
             text: 'Perfil',
@@ -53,19 +54,16 @@ const siteConfig: SiteConfig = {
             href: '/projects'
         },
     ],
+    
     hero: {
-        title: '¡Bienvenido(a) a mi portafolio! Aquí encontrarás una muestra de mis proyectos, habilidades y experiencias que reflejan mi pasión y compromiso con el desarrollo profesional. ¡Gracias por visitarlo!!',
-        text: 'Soy Analista y Desarrollador de Software con 4 años de trayectoria en el sector. A lo largo de mi carrera, he participado en proyectos de interoperabilidad en salud, soluciones para el sector inmobiliario, tiendas en línea y aplicaciones web. También he trabajado en la implementación de software para pequeñas y medianas empresas (pymes) y en sistemas de gestión documental. Mi enfoque está orientado a crear soluciones funcionales, eficientes y adaptadas a las necesidades de cada cliente.', //
+        title: '¡Hola! Soy Jorge Arboleda.',
+        text: 'Bienvenido a mi portafolio. Soy Analista y Desarrollador de Software con más de 4 años de experiencia en el diseño e implementación de soluciones tecnológicas. He trabajado en proyectos de interoperabilidad en salud, aplicaciones inmobiliarias, e-commerce, sistemas de gestión documental y soluciones empresariales para pymes. Me especializo en crear productos funcionales, eficientes y centrados en las necesidades del cliente.',
         image: {
             src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
+            alt: 'Jorge Arboleda en su espacio de trabajo'
         },
     },
-    subscribe: {
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
-        formUrl: '#'
-    },
+
     postsPerPage: 8,
     projectsPerPage: 8
 };
