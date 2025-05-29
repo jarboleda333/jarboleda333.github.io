@@ -7,7 +7,7 @@ seo:
     src: '/project-6.jpg'
 ---
 
-![Project preview](/project-6.jpg)
+![Project preview](/project-6.png)
 
 **Resumen del proyecto**
 Desarrollé aplicaciones web para el sector inmobiliario, facilitando la gestión de propiedades, clientes y procesos de venta y arriendo. Implementé automatizaciones, funcionalidades de búsqueda avanzada y módulos de administración, mejorando la eficiencia operativa y la experiencia del usuario.
