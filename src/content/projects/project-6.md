@@ -1,6 +1,7 @@
 ---
 title: Desarrollador de Software – Soluciones para el Sector Inmobiliario
 description: Desarrollé aplicaciones web para el sector inmobiliario, optimizando la gestión de propiedades, clientes y procesos de venta. Implementé automatizaciones y funciones administrativas para mejorar la eficiencia y la experiencia del usuario.
+publishDate: 'Jan 10 2024'
 seo:
   image:
     src: '/project-6.jpg'
