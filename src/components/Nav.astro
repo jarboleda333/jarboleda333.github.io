@@ -25,7 +25,7 @@ const navLinks = siteConfig.headerNavLinks || [];
                     {navLinks.map((link) => (
                         <li>
                             <NavLink
-                                class="block px-4 py-2 text-xl md:text-lg font-sans font-semibold text-main border border-main rounded-xl bg-white hover:bg-main hover:text-white transition"
+                                class="block px-4 py-2 text-xl md:text-lg font-sans font-semibold text-black bg-[#b3b6b7] border border-[#b3b6b7] rounded-xl hover:bg-[#999c9e] hover:text-white transition no-underline"
                                 href={link.href}
                             >
                                 {link.text}
@@ -40,68 +40,3 @@ const navLinks = siteConfig.headerNavLinks || [];
         <ThemeToggle />
     </div>
 </nav>
-
-<style>
-    @reference "tailwindcss";
-
-    @media (max-width: 767px) {
-        .menu {
-            @apply invisible opacity-0;
-            width: calc(100% + 1.25rem);
-        }
-        .menu.is-visible {
-            @apply visible opacity-100;
-            transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-        }
-        .menu-toggle-icon {
-            transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-        }
-        .menu-toggle.is-active .menu-toggle-icon {
-            @apply w-0;
-            transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .menu-toggle-icon:before,
-        .menu-toggle-icon:after {
-            @apply w-6 h-px absolute left-1/2 top-0 origin-center -translate-x-1/2 bg-current;
-            content: '';
-            transition:
-                rotate 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-        }
-        .menu-toggle-icon:before {
-            @apply -mt-1.5;
-        }
-        .menu-toggle-icon:after {
-            @apply mt-1.5;
-        }
-        .menu-toggle.is-active .menu-toggle-icon:before,
-        .menu-toggle.is-active .menu-toggle-icon:after {
-            @apply mt-0;
-            transition:
-                margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
-                rotate 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-        }
-        .menu-toggle.is-active .menu-toggle-icon:before {
-            @apply rotate-45;
-        }
-        .menu-toggle.is-active .menu-toggle-icon:after {
-            @apply -rotate-45;
-        }
-    }
-</style>
-
-<script>
-    function menuToggle() {
-        const menu = document.querySelector('.menu');
-        const menuToggleBtn = document.querySelector('.menu-toggle');
-        menuToggleBtn?.addEventListener('click', () => {
-            const isMenuExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
-            menuToggleBtn.classList.toggle('is-active');
-            menuToggleBtn.setAttribute('aria-expanded', isMenuExpanded ? 'false' : 'true');
-            menuToggleBtn.setAttribute('aria-label', isMenuExpanded ? 'Open Menu' : 'Close Menu');
-            menu?.classList.toggle('is-visible');
-        });
-    }
-    menuToggle();
-    document.addEventListener('astro:after-swap', menuToggle);
-</script>
