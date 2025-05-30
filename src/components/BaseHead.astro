@@ -47,11 +47,5 @@ function formatCanonicalURL(url: string | URL) {
 <link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
 <meta name="description" content={description} />
 
-<!-- Centered Circular Image -->
-{resolvedImage && (
-  <div class="image-container">
-    <img src={resolvedImage.src} alt={resolvedImage.alt ?? 'Page image'} class="circular-image" />
-  </div>
-)}
 
 
