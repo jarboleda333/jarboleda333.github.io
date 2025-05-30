@@ -40,7 +40,7 @@ const { Content } = await render(project);
     {
         (prevProject || nextProject) && (
             <div class="my-16 sm:my-24">
-                <h2 class="mb-12 text-xl font-sans font-bold italic sm:mb-16 sm:text-2xl">Ver siguiente</h2>
+                <h2 class="mb-12 text-xl font-sans font-bold  sm:mb-16 sm:text-2xl">Ver siguiente</h2>
                 {nextProject && <ProjectPreview project={nextProject} class="mb-10 sm:mb-12" headingLevel="h3" />}
                 {prevProject && <ProjectPreview project={prevProject} class="mb-10 sm:mb-12" headingLevel="h3" />}
             </div>
