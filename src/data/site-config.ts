@@ -39,33 +39,38 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    website: 'https://jarboleda333.github.io',
-    title: '',
-    subtitle: '',
-    description: 'Tema para blog y portafolio basado en Astro.js y Tailwind CSS, creado por justgoodui.com',
-    
-    headerNavLinks: [
-        {
-            text: 'Perfil',
-            href: '/'
-        },
-        {
-            text: 'Proyectos',
-            href: '/projects'
-        },
-    ],
-    
-    hero: {
-        title: '¡Hola! Soy Jorge Arboleda.',
-        text: 'Bienvenido a mi portafolio. Soy Analista y Desarrollador de Software con más de 4 años de experiencia en el diseño e implementación de soluciones tecnológicas. He trabajado en proyectos de interoperabilidad en salud, aplicaciones inmobiliarias, e-commerce, sistemas de gestión documental y soluciones empresariales para pymes. Me especializo en crear productos funcionales, eficientes y centrados en las necesidades del cliente.',
-        image: {
-            src: '/hero.jpeg',
-            alt: 'Jorge Arboleda en su espacio de trabajo'
-        },
-    },
+  website: 'https://jarboleda333.github.io',
+  title: '',
+  subtitle: '',
+  description: 'Tema para blog y portafolio basado en Astro.js y Tailwind CSS, creado por justgoodui.com',
+  
+  image: {
+    src: '/site-image.jpg',
+    alt: 'Vista previa del sitio'
+  },
 
-    postsPerPage: 8,
-    projectsPerPage: 8
+  headerNavLinks: [
+    {
+      text: 'Perfil',
+      href: '/'
+    },
+    {
+      text: 'Proyectos',
+      href: '/projects'
+    },
+  ],
+
+  hero: {
+    title: '¡Hola! Soy Jorge Arboleda.',
+    text: 'Bienvenido a mi portafolio...',
+    image: {
+      src: '/hero.jpeg',
+      alt: 'Jorge Arboleda en su espacio de trabajo'
+    }
+  },
+
+  postsPerPage: 8,
+  projectsPerPage: 8
 };
 
 export default siteConfig;
