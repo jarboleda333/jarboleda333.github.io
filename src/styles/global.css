@@ -23,8 +23,8 @@ html.dark {
 
 /* Tipografía y temas */
 @theme inline {
-    --font-sans: 'Inter Variable', font-sans;
-    --font-sans: 'Newsreader Variable', sans;
+    --font-serif: 'Inter Variable', font-serif;
+    --font-serif: 'Newsreader Variable', serif;
     --text-color-main: var(--text-main);
     --background-color-main: var(--bg-main);
     --background-color-muted: var(--bg-muted);
@@ -56,7 +56,7 @@ html.dark {
     }
 
     .prose :where(h1, h2, h3, h4, h5, h6) {
-        @apply font-sans font-medium;
+        @apply font-serif font-medium;
     }
 
     .prose :where(code, strong) {
@@ -64,7 +64,7 @@ html.dark {
     }
 
     .prose blockquote {
-        @apply font-sans font-normal italic border-none pl-0 text-[1.375em] leading-snug sm:text-[1.66667em];
+        @apply font-serif font-normal italic border-none pl-0 text-[1.375em] leading-snug sm:text-[1.66667em];
     }
 
     /* 🎯 Diseño para bloques personalizados como Lenguajes y Estudios */
