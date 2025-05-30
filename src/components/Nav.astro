@@ -20,12 +20,12 @@ const navLinks = siteConfig.headerNavLinks || [];
                 </button>
                 <ul
                     id="menu-items"
-                    class="menu flex gap-6 max-md:flex-col max-md:gap-1 max-md:absolute max-md:-top-2.5 max-md:-left-2.5 max-md:max-w-64 max-md:px-3 max-md:pt-16 max-md:pb-10 max-md:z-20 max-md:bg-main max-md:border max-md:border-dashed max-md:border-main"
+                    class="menu flex justify-center flex-wrap gap-4 max-md:flex-col max-md:gap-2 max-md:absolute max-md:-top-2.5 max-md:-left-2.5 max-md:max-w-64 max-md:px-3 max-md:pt-16 max-md:pb-10 max-md:z-20 max-md:bg-main max-md:border max-md:border-dashed max-md:border-main"
                 >
                     {navLinks.map((link) => (
-                        <li class="py-1">
+                        <li>
                             <NavLink
-                                class="text-2xl md:text-xl font-sans font-semibold text-main hover:underline hover:underline-offset-4 hover:decoration-2"
+                                class="block px-4 py-2 text-xl md:text-lg font-sans font-semibold text-main border border-main rounded-xl bg-white hover:bg-main hover:text-white transition"
                                 href={link.href}
                             >
                                 {link.text}
