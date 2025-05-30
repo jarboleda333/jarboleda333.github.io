@@ -18,43 +18,46 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   <Hero />
 
-  <!-- 🎨 Lenguajes -->
+  <!-- 🎨 Lenguajes + 🎓 Estudios -->
   <section class="section-block border-t">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Lenguajes</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {[
-          'JavaScript', 'Python', 'HTML & CSS',
-          'SQL', 'Java', 'PHP', 'C#' , 'WordPress' ,
-          'Shopify'
-        ].map(lang => (
-          <div class="tag-block">{lang}</div>
-        ))}
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12">
+      
+      <!-- Lenguajes -->
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Lenguajes</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {[
+            'JavaScript', 'Python', 'HTML & CSS',
+            'SQL', 'Java', 'PHP', 'C#', 'WordPress',
+            'Shopify'
+          ].map(lang => (
+            <div class="tag-block">{lang}</div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 🎓 Estudios -->
-  <section class="section-block border-t">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Estudios</h2>
-      <div class="space-y-6">
-        <div class="card-block">
-          <h3 class="text-xl font-semibold">Tecnólogo en Análisis y Desarrollo de Software</h3>
-          <p>SENA — Servicio Nacional de Aprendizaje</p>
-          <p class="text-sm opacity-70">Finalizado</p>
-        </div>
-        <div class="card-block">
-          <h3 class="text-xl font-semibold">Corporación Unificada Nacional de Educación Superior</h3>
-          <p>Ingeniería de Sistemas</p>
-          <p class="text-sm opacity-70">En proceso</p>
-        </div>
-        <div class="card-block">
-          <h3 class="text-xl font-semibold">Logica de negocio</h3>
-          <p>Curso complementario</p>
-          <p class="text-sm opacity-70">En proceso / Finalizado</p>
+      <!-- Estudios -->
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Estudios</h2>
+        <div class="space-y-6">
+          <div class="card-block">
+            <h3 class="text-xl font-semibold">Tecnólogo en Análisis y Desarrollo de Software</h3>
+            <p>SENA — Servicio Nacional de Aprendizaje</p>
+            <p class="text-sm opacity-70">Finalizado</p>
+          </div>
+          <div class="card-block">
+            <h3 class="text-xl font-semibold">Corporación Unificada Nacional de Educación Superior</h3>
+            <p>Ingeniería de Sistemas</p>
+            <p class="text-sm opacity-70">En proceso</p>
+          </div>
+          <div class="card-block">
+            <h3 class="text-xl font-semibold">Lógica de negocio</h3>
+            <p>Curso complementario</p>
+            <p class="text-sm opacity-70">En proceso / Finalizado</p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
