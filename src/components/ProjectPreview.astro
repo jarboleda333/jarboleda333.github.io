@@ -14,13 +14,13 @@ const TitleTag = headingLevel;
     <a class:list={['flex justify-between items-start gap-8 group', className]} href={`/projects/${project.id}/`}>
         <div class="grow">
             <TitleTag
-                class="text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl"
+                class="text-xl leading-tight font-sans font-medium sm:text-2xl"
             >
                 {title}
             </TitleTag>
             {description && <div class="mt-1 text-sm leading-normal">{description}</div>}
         </div>
-        <div class="hidden font-sans opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0 hover:underline">
+        <div class="hidden font-sans opacity-0 transition sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0 ">
             Ver proyecto <ArrowRight class="fill-current w-4 h-4" />
         </div>
     </a>
