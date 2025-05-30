@@ -1,21 +1,21 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import siteConfig from '../data/site-config';
-import { sortItemsByDateDesc } from '../utils/data-utils';
+import siteConfig from '../data/site-config.ts';
+import { sortItemsByDateDesc } from '../utils/data-utils.ts';
 
 export async function GET(context) {
-  const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+    const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
 
-  return rss({
-    title: siteConfig.title || '',
-    description: siteConfig.description || '',
-    site: context.site,
-    items: posts.map((item) => ({
-      title: item.data.title,
-      description: item.data.excerpt,
-      link: `/blog/${item.id}/`,
-      pubDate: item.data.publishDate.setUTCHours(0),
-    })),
-  });
+    return rss({
+        title: siteConfig.title || 'Mi RSS', // Valor por defecto si no hay title
+        description: siteConfig.description || 'Descripción del feed RSS', // Valor por defecto
+        site: context.site,
+        items: posts.map((item) => ({
+            title: item.data.title,
+            description: item.data.excerpt,
+            link: `/blog/${item.id}/`,
+            pubDate: item.data.publishDate.setUTCHours(0),
+        })),
+    });
 }
 
